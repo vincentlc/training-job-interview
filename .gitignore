@@ -15,6 +15,7 @@ __pycache__/
 env/
 venv/
 ENV/
+.vscode/
 
 # Test / coverage reports
 htmlcov/
@@ -40,6 +41,14 @@ htmlcov/
 *.out
 *.a
 *.lib
+
+# Compiled binaries and executables
+count_string
+number_of_bits
+reverse_string
+sub_array
+two_sum
+incorrect_password
 
 # Build directories
 build/
