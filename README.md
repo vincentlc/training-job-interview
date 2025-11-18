@@ -1,75 +1,132 @@
-
 # 🛠️ Tech Interview Practice
 
-This repository contains my **practice projects, coding exercises, and TDD examples** in **Python** and **C++**, created as part of a structured self-training program to prepare for technical interviews.  
+This repository contains my **coding exercises and algorithm solutions** in **Python** and **C**, created as part of a structured self-training program to prepare for technical interviews.
 
-It includes solutions to algorithm problems, object-oriented design exercises, and small test-driven development (TDD) projects.  
-The goal is to **demonstrate coding fluency, clean design, and professional development workflow**.
+It includes solutions to classic algorithm problems, test-driven development (TDD) examples, and exercises covering core data structures and patterns used in technical interviews.
+
+The goal is to **demonstrate coding fluency, problem-solving skills, and professional development practices**.
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-
-tech-interview-practice/
+Training_job_interview/
+│
 ├─ Python/
-│  ├─ Day1\_dict\_set/        # Python exercises with dict, set, list comprehension
-│  ├─ Day2\_enumerate\_map/   # Python exercises with enumerate, zip, map/filter
-│  └─ TDD\_projects/         # Small TDD-based projects (e.g. TicTacToe)
+│  ├─ 00_first_assessment/    # Initial assessment and baseline exercises
+│  ├─ 01_dict_set/            # Exercises with dictionaries, sets, and duplicates
+│  │  ├─ contain_duplicate/
+│  │  └─ two_sum/
+│  ├─ 02_zip_map/             # Exercises with zip, map, and string operations
+│  │  ├─ domino/
+│  │  ├─ first_uniq_char/
+│  │  ├─ intersection_two_array/
+│  │  └─ two_anagram/
+│  └─ [More to come...]
 │
-├─ C++/
-│  ├─ STL\_maps\_vectors/     # C++ exercises using map, unordered\_map, vector
-│  ├─ STL\_set\_iterators/    # C++ exercises using set, iterators, range loops
-│  └─ TDD\_projects/         # Small TDD-based C++ projects (e.g. FizzBuzz)
+├─ C/
+│  ├─ Two_sums/               # Two-sum problem implementation
+│  ├─ Count_String/           # String counting operations
+│  ├─ Number_of_bits1/        # Bit manipulation exercises
+│  ├─ Password_Attempts/      # Logic and control flow
+│  ├─ Reverse_string/         # String reversal
+│  ├─ SubArray/               # Subarray algorithms
+│  └─ [More to come...]
 │
-└─ README.md                # Main repository documentation
-
-````
+├─ C++/                        # Coming soon...
+│
+└─ README.md                   # Main repository documentation
+```
 
 ---
 
 ## 🚀 How to Run
 
 ### Python
-- Install dependencies:
-  ```bash
-  pip install pytest
-  ```
 
-- Run tests for a given exercise:
+Install dependencies (if needed):
+```bash
+pip install pytest
+```
 
-  ```bash
-  pytest Python/Day1_dict_set/test_word_count.py
-  ```
+Run tests for a given exercise:
+```bash
+cd Python/01_dict_set/two_sum
+pytest test_two_sum.py
+```
 
-### C++
+Or run a single file:
+```bash
+python Python/01_dict_set/two_sum/two_sum.py
+```
 
-* Build and run with your compiler (example using `g++`):
+### C
 
-  ```bash
-  g++ -std=c++17 -o test StudentRegistry.cpp test_StudentRegistry.cpp
-  ./test
-  ```
-* For more advanced tests, integrate with [GoogleTest](https://github.com/google/googletest).
+Navigate to the problem directory and run:
+```bash
+cd C/Two_sums
+./run.sh
+```
+
+Or build and run manually:
+```bash
+cd C/Two_sums
+make
+./two_sum
+```
+
+Each C project includes a `Makefile`, `run.sh` script, and a test suite in the `test/` directory.
 
 ---
 
-## 📚 Topics Covered
+## 📚 Problems & Topics
 
-- **Python**: dict, set, list comprehensions, enumerate, zip, map/filter, OOP, TDD with pytest
-- **C++**: STL containers (map, unordered\_map, set, vector), iterators, OOP, TDD with GoogleTest
-- **Algorithms**: sorting, two-pointer, binary search, recursion, basic dynamic programming
-- **TDD**: test-first approach, pytest (Python), GoogleTest (C++)
-- **Git**: branching, commits, pull requests, professional workflow
+### Python
+- **01_dict_set**: Hash maps, sets, duplicate detection, two-pointer approaches
+- **02_zip_map**: String operations, character frequencies, array operations
+
+### C
+- **Two_sums**: Hash-based approach to finding pairs
+- **String Operations**: Character counting, string reversal
+- **Bit Manipulation**: Bit counting and operations
+- **Array Algorithms**: Subarray problems, dynamic programming foundations
 
 ---
 
-## 🎯 Goal
+## 🎯 Goals
 
-- Strengthen fundamentals in **Python and C++**
-- Practice common **algorithm and data structure patterns** used in interviews
-- Apply **test-driven development** and clean coding practices
-- Build a **visible portfolio** of structured, documented projects
+- ✅ Practice **algorithm problem-solving** in multiple languages
+- ✅ Develop **clean, tested code** with TDD principles
+- ✅ Build **reusable problem patterns** for technical interviews
+- ✅ Demonstrate **professional coding practices** and documentation
+- 🔜 Expand to more languages and advanced topics (C++ coming soon)
+
+---
+
+## 📝 Adding New Problems
+
+To maintain consistency, follow this structure for new problems:
+
+**Python:**
+```
+Python/NN_topic/problem_name/
+├─ problem_name.py       # Solution
+├─ test_problem_name.py  # Tests (pytest)
+└─ README.md            # Problem description
+```
+
+**C:**
+```
+C/Problem_Name/
+├─ src/
+│  ├─ problem.c
+│  └─ problem.h
+├─ test/
+│  └─ main.c
+├─ Makefile
+├─ run.sh
+└─ README.md
+```
 
 
